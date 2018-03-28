@@ -32,7 +32,6 @@ void add_mesh(std::shared_ptr<GameObject> game_object) {
     mesh->set_uvs(uvs);
     mesh->set_normals(normals);
 
-
     game_object->add_component(mesh);
 }
 
@@ -47,6 +46,8 @@ void add_game_object(std::shared_ptr<Scene> scene) {
 
     auto game_object1 = std::make_shared<GameObject>("game_object1");
     add_mesh(game_object1);
+
+    game_object1->add_child(game_object_child);
 
     scene->add_root(game_object);
     scene->add_root(game_object1);
