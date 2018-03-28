@@ -32,6 +32,7 @@ void add_mesh(std::shared_ptr<GameObject> game_object) {
     mesh->set_uvs(uvs);
     mesh->set_normals(normals);
 
+
     game_object->add_component(mesh);
 }
 
